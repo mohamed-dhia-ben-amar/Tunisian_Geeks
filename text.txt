@@ -1,0 +1,20 @@
+//declaration
+SDL_Surface* text = NULL 
+SDL_Rect posText;
+
+//initialisation de la position du texte
+posText.x = 250;
+posText.y = 50;
+
+//creer une police
+TTF_Font *font;
+font = TTF_OpenFont("font.ttf", 40);
+SDL_Color fontcolor = {0, 0, 0};
+
+//creer une zone texte
+text = TTF_RenderText_Blended(font, "Lost in EGYPT", fontcolor);
+SDL_BlitSurface(text, NULL, ecran, &posText);
+
+//fermer
+SDL_Flip(ecran);
+TTF_CloseFont(font); /*closing the font before freeing the momory*/
