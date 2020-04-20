@@ -4,7 +4,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 #include <SDL/SDL_mixer.h>
-#include"scrolling.c"
+#include "scrolling.c"
 
 int main() {
 	SDL_Surface *screen;
