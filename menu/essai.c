@@ -318,5 +318,5 @@ int main()
   Mix_CloseAudio(); //Fermeture de l'API
   SDL_Quit();
   pause = getchar();
-  return 0;
+  return 1;
 }
