@@ -1,0 +1,178 @@
+\hypertarget{scrolling_8h}{}\section{scrolling.\+h File Reference}
+\label{scrolling_8h}\index{scrolling.\+h@{scrolling.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for scrolling.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scrolling_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{scrolling_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structHero}{Hero}
+\item 
+struct \hyperlink{structscrollImage}{scroll\+Image}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structHero}{Hero} \hyperlink{scrolling_8h_addc5c88d9738added14e95fd8f92b36f}{Hero}
+\item 
+typedef struct \hyperlink{structscrollImage}{scroll\+Image} \hyperlink{scrolling_8h_a0d83a8d1be6f5fe5d7281ce3b55cb875}{scroll\+Image}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{scrolling_8h_adb8f7dc3d49f42765621f30ccc3d96db}{S\+C\+R\+O\+L\+L\+\_\+\+Init} (\hyperlink{structscrollImage}{scroll\+Image} $\ast$s, char $\ast$path)
+\item 
+void \hyperlink{scrolling_8h_ad1ec458216ea982b0e222f955f5b2002}{S\+C\+R\+O\+L\+L\+\_\+\+Render} (\hyperlink{structscrollImage}{scroll\+Image} $\ast$s, S\+D\+L\+\_\+\+Surface $\ast$$\ast$screen)
+\item 
+void \hyperlink{scrolling_8h_a2dafd7dbca163280e97acfd66e8d5780}{initialize\+Hero} (\hyperlink{structHero}{Hero} $\ast$hero)
+\item 
+void \hyperlink{scrolling_8h_a594ed7f200fc5f13125cbfab63bbad44}{animeg} (S\+D\+L\+\_\+\+Rect animepos\mbox{[}$\,$\mbox{]}, int $\ast$frame)
+\item 
+void \hyperlink{scrolling_8h_a4ca125812ab069b83f5692017d89e857}{animed} (S\+D\+L\+\_\+\+Rect animepos\mbox{[}$\,$\mbox{]}, int $\ast$frame)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{scrolling_8h_af8ea4d2851d2d656fd42be239e36ce6e}{v\+\_\+x} = cos(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}
+\item 
+double \hyperlink{scrolling_8h_a2161079bbf87834cfdf4d3548a53eb3b}{v\+\_\+y} = sin(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}
+\item 
+const double \hyperlink{scrolling_8h_a6e550921d5c2c78c55be1c0d76512d45}{g} = 9.\+81
+\item 
+const double \hyperlink{scrolling_8h_a43016d873124d39034edb8cd164794db}{pi} = 3.\+14
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{scrolling_8h_addc5c88d9738added14e95fd8f92b36f}\label{scrolling_8h_addc5c88d9738added14e95fd8f92b36f}} 
+\index{scrolling.\+h@{scrolling.\+h}!Hero@{Hero}}
+\index{Hero@{Hero}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{Hero}{Hero}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structHero}{Hero} \hyperlink{structHero}{Hero}}
+
+\mbox{\Hypertarget{scrolling_8h_a0d83a8d1be6f5fe5d7281ce3b55cb875}\label{scrolling_8h_a0d83a8d1be6f5fe5d7281ce3b55cb875}} 
+\index{scrolling.\+h@{scrolling.\+h}!scroll\+Image@{scroll\+Image}}
+\index{scroll\+Image@{scroll\+Image}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{scroll\+Image}{scrollImage}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structscrollImage}{scroll\+Image}  \hyperlink{structscrollImage}{scroll\+Image}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{scrolling_8h_a4ca125812ab069b83f5692017d89e857}\label{scrolling_8h_a4ca125812ab069b83f5692017d89e857}} 
+\index{scrolling.\+h@{scrolling.\+h}!animed@{animed}}
+\index{animed@{animed}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{animed()}{animed()}}
+{\footnotesize\ttfamily void animed (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Rect}]{animepos\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{frame }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{scrolling_8h_a4ca125812ab069b83f5692017d89e857_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scrolling_8h_a594ed7f200fc5f13125cbfab63bbad44}\label{scrolling_8h_a594ed7f200fc5f13125cbfab63bbad44}} 
+\index{scrolling.\+h@{scrolling.\+h}!animeg@{animeg}}
+\index{animeg@{animeg}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{animeg()}{animeg()}}
+{\footnotesize\ttfamily void animeg (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Rect}]{animepos\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{frame }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{scrolling_8h_a594ed7f200fc5f13125cbfab63bbad44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scrolling_8h_a2dafd7dbca163280e97acfd66e8d5780}\label{scrolling_8h_a2dafd7dbca163280e97acfd66e8d5780}} 
+\index{scrolling.\+h@{scrolling.\+h}!initialize\+Hero@{initialize\+Hero}}
+\index{initialize\+Hero@{initialize\+Hero}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{initialize\+Hero()}{initializeHero()}}
+{\footnotesize\ttfamily void initialize\+Hero (\begin{DoxyParamCaption}\item[{\hyperlink{structHero}{Hero} $\ast$}]{hero }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{scrolling_8h_a2dafd7dbca163280e97acfd66e8d5780_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scrolling_8h_adb8f7dc3d49f42765621f30ccc3d96db}\label{scrolling_8h_adb8f7dc3d49f42765621f30ccc3d96db}} 
+\index{scrolling.\+h@{scrolling.\+h}!S\+C\+R\+O\+L\+L\+\_\+\+Init@{S\+C\+R\+O\+L\+L\+\_\+\+Init}}
+\index{S\+C\+R\+O\+L\+L\+\_\+\+Init@{S\+C\+R\+O\+L\+L\+\_\+\+Init}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+O\+L\+L\+\_\+\+Init()}{SCROLL\_Init()}}
+{\footnotesize\ttfamily void S\+C\+R\+O\+L\+L\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{structscrollImage}{scroll\+Image} $\ast$}]{s,  }\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{scrolling_8h_adb8f7dc3d49f42765621f30ccc3d96db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scrolling_8h_ad1ec458216ea982b0e222f955f5b2002}\label{scrolling_8h_ad1ec458216ea982b0e222f955f5b2002}} 
+\index{scrolling.\+h@{scrolling.\+h}!S\+C\+R\+O\+L\+L\+\_\+\+Render@{S\+C\+R\+O\+L\+L\+\_\+\+Render}}
+\index{S\+C\+R\+O\+L\+L\+\_\+\+Render@{S\+C\+R\+O\+L\+L\+\_\+\+Render}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+O\+L\+L\+\_\+\+Render()}{SCROLL\_Render()}}
+{\footnotesize\ttfamily void S\+C\+R\+O\+L\+L\+\_\+\+Render (\begin{DoxyParamCaption}\item[{\hyperlink{structscrollImage}{scroll\+Image} $\ast$}]{s,  }\item[{S\+D\+L\+\_\+\+Surface $\ast$$\ast$}]{screen }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{scrolling_8h_ad1ec458216ea982b0e222f955f5b2002_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{scrolling_8h_a6e550921d5c2c78c55be1c0d76512d45}\label{scrolling_8h_a6e550921d5c2c78c55be1c0d76512d45}} 
+\index{scrolling.\+h@{scrolling.\+h}!g@{g}}
+\index{g@{g}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily const double g = 9.\+81}
+
+\mbox{\Hypertarget{scrolling_8h_a43016d873124d39034edb8cd164794db}\label{scrolling_8h_a43016d873124d39034edb8cd164794db}} 
+\index{scrolling.\+h@{scrolling.\+h}!pi@{pi}}
+\index{pi@{pi}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily const double pi = 3.\+14}
+
+\mbox{\Hypertarget{scrolling_8h_af8ea4d2851d2d656fd42be239e36ce6e}\label{scrolling_8h_af8ea4d2851d2d656fd42be239e36ce6e}} 
+\index{scrolling.\+h@{scrolling.\+h}!v\+\_\+x@{v\+\_\+x}}
+\index{v\+\_\+x@{v\+\_\+x}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{v\+\_\+x}{v\_x}}
+{\footnotesize\ttfamily double v\+\_\+x = cos(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}}
+
+\mbox{\Hypertarget{scrolling_8h_a2161079bbf87834cfdf4d3548a53eb3b}\label{scrolling_8h_a2161079bbf87834cfdf4d3548a53eb3b}} 
+\index{scrolling.\+h@{scrolling.\+h}!v\+\_\+y@{v\+\_\+y}}
+\index{v\+\_\+y@{v\+\_\+y}!scrolling.\+h@{scrolling.\+h}}
+\subsubsection{\texorpdfstring{v\+\_\+y}{v\_y}}
+{\footnotesize\ttfamily double v\+\_\+y = sin(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}}
+

@@ -1,0 +1,103 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}scrolling.\+c\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{main_8c_a6e550921d5c2c78c55be1c0d76512d45}{g} = 9.\+81
+\item 
+const double \hyperlink{main_8c_a43016d873124d39034edb8cd164794db}{pi} = 3.\+14
+\item 
+int \hyperlink{main_8c_ac310d9181e916ba43604099aee272c71}{t} = 0
+\item 
+int \hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init} = 2
+\item 
+int \hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init} = \hyperlink{scrolling_8h_a43016d873124d39034edb8cd164794db}{pi}/3
+\item 
+double \hyperlink{main_8c_af8ea4d2851d2d656fd42be239e36ce6e}{v\+\_\+x} = cos(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}
+\item 
+double \hyperlink{main_8c_a2161079bbf87834cfdf4d3548a53eb3b}{v\+\_\+y} = sin(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_ab8e20ab92095179ddfb4458f9c107090}\label{main_8c_ab8e20ab92095179ddfb4458f9c107090}} 
+\index{main.\+c@{main.\+c}!angle\+\_\+init@{angle\+\_\+init}}
+\index{angle\+\_\+init@{angle\+\_\+init}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{angle\+\_\+init}{angle\_init}}
+{\footnotesize\ttfamily int angle\+\_\+init = \hyperlink{scrolling_8h_a43016d873124d39034edb8cd164794db}{pi}/3}
+
+\mbox{\Hypertarget{main_8c_a6e550921d5c2c78c55be1c0d76512d45}\label{main_8c_a6e550921d5c2c78c55be1c0d76512d45}} 
+\index{main.\+c@{main.\+c}!g@{g}}
+\index{g@{g}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily const double g = 9.\+81}
+
+\mbox{\Hypertarget{main_8c_a43016d873124d39034edb8cd164794db}\label{main_8c_a43016d873124d39034edb8cd164794db}} 
+\index{main.\+c@{main.\+c}!pi@{pi}}
+\index{pi@{pi}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily const double pi = 3.\+14}
+
+\mbox{\Hypertarget{main_8c_ac310d9181e916ba43604099aee272c71}\label{main_8c_ac310d9181e916ba43604099aee272c71}} 
+\index{main.\+c@{main.\+c}!t@{t}}
+\index{t@{t}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily int t = 0}
+
+\mbox{\Hypertarget{main_8c_ab16878bb20bd9d6028aa1300b223d3db}\label{main_8c_ab16878bb20bd9d6028aa1300b223d3db}} 
+\index{main.\+c@{main.\+c}!v\+\_\+init@{v\+\_\+init}}
+\index{v\+\_\+init@{v\+\_\+init}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{v\+\_\+init}{v\_init}}
+{\footnotesize\ttfamily int v\+\_\+init = 2}
+
+\mbox{\Hypertarget{main_8c_af8ea4d2851d2d656fd42be239e36ce6e}\label{main_8c_af8ea4d2851d2d656fd42be239e36ce6e}} 
+\index{main.\+c@{main.\+c}!v\+\_\+x@{v\+\_\+x}}
+\index{v\+\_\+x@{v\+\_\+x}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{v\+\_\+x}{v\_x}}
+{\footnotesize\ttfamily double v\+\_\+x = cos(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}}
+
+\mbox{\Hypertarget{main_8c_a2161079bbf87834cfdf4d3548a53eb3b}\label{main_8c_a2161079bbf87834cfdf4d3548a53eb3b}} 
+\index{main.\+c@{main.\+c}!v\+\_\+y@{v\+\_\+y}}
+\index{v\+\_\+y@{v\+\_\+y}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{v\+\_\+y}{v\_y}}
+{\footnotesize\ttfamily double v\+\_\+y = sin(\hyperlink{main_8c_ab8e20ab92095179ddfb4458f9c107090}{angle\+\_\+init})$\ast$\hyperlink{main_8c_ab16878bb20bd9d6028aa1300b223d3db}{v\+\_\+init}}
+

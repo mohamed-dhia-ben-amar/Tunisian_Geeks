@@ -1,3 +1,7 @@
+/**
+* @file tache.h
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <SDL/SDL.h>
@@ -5,6 +9,10 @@
 #include "string.h"
 
 //Détection de collision entre 2 entités en mouvement
+/**
+* @struct AABB
+* @brief struct for entity
+*/
 typedef struct AABB {
 
   int x ;
@@ -15,6 +23,10 @@ typedef struct AABB {
 }AABB;
 
 //Afficher les entités secondaires
+/**
+* @struct ennemi
+* @brief struct for ennemy
+*/
 typedef struct ennemi
 {
   char nom_img_ennemi[20];
