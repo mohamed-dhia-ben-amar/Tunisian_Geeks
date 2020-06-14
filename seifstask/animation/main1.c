@@ -20,7 +20,9 @@ SDL_Rect animepos[8];
 SDL_Event event;
 int frame=4;
 Hero hero;
+
 initializeHero(&hero);
+
 animepos[0].x=0;
 animepos[0].y=0;
 animepos[0].w=128;
@@ -61,87 +63,45 @@ animepos[7].y=0;
 animepos[7].w=159;
 animepos[7].h=180;
 
-
-
-
 positionfond.x=0;
 positionfond.y=0;
 
-
 fond= IMG_Load("background.png");
-
 
 while (continuer == 1)
     {
-
-
         SDL_PollEvent(&event);
         switch(event.type)
         {
-
-
-
-            case SDL_QUIT:
-                continuer = 0;
-
-SDL_Quit();
-                break;
-	 
             case SDL_KEYDOWN:
                 switch(event.key.keysym.sym)
                 {   
-		    case SDLK_ESCAPE:
-			continuer=0;
-			break; 
-		    case SDLK_UP: 
-
-                             hero.positionimage.y -= 4;
-                        break;
+		            case SDLK_ESCAPE:
+			        continuer=0;
+			        break; 
+		    
+                    case SDLK_UP: 
+                    hero.positionimage.y -= 4;
+                    break;
             
-                  case SDLK_DOWN:
+                    case SDLK_DOWN:
+                    hero.positionimage.y +=2;
+                    break;
                     
-                   hero.positionimage.y +=2;
-                        break;
-
- 
-                   
                     case SDLK_RIGHT:
-
-
-
-
-
-                             animed(animepos,&frame);
-
-          hero.positionimage.x+=20;
-
-
-
-		    break;
+                    animed(animepos,&frame);
+                    hero.positionimage.x+=20;
+                    break;
 
                     case SDLK_LEFT: 
-
- 
-animeg(animepos,&frame);
-			
-hero.positionimage.x-=20;
-
-
-
-
-                        break;
-		    
+                    animeg(animepos,&frame);
+			        hero.positionimage.x-=20;
+                    break;
                 }
-               
-
-                
-}
- 
-SDL_BlitSurface(fond,NULL,screen, &positionfond);
-SDL_BlitSurface(hero.image,&animepos[frame],screen,&hero.positionimage);
-
-SDL_Flip(screen);
-
-}
+        }
+        SDL_BlitSurface(fond,NULL,screen, &positionfond);
+        SDL_BlitSurface(hero.image,&animepos[frame],screen,&hero.positionimage);
+        SDL_Flip(screen);
+    }
 
 }

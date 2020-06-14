@@ -1,0 +1,29 @@
+\hypertarget{structpersonnage}{}\section{personnage Struct Reference}
+\label{structpersonnage}\index{personnage@{personnage}}
+
+
+Collaboration diagram for personnage\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structpersonnage_aa27490c4ef33e8eb58c47da183ce1899}\label{structpersonnage_aa27490c4ef33e8eb58c47da183ce1899}} 
+S\+D\+L\+\_\+\+Rect {\bfseries positionP}
+\item 
+\mbox{\Hypertarget{structpersonnage_a80896a61c4623f9cdb70b0dce8ad7c0b}\label{structpersonnage_a80896a61c4623f9cdb70b0dce8ad7c0b}} 
+S\+D\+L\+\_\+\+Surface $\ast$ {\bfseries imageP}
+\item 
+\mbox{\Hypertarget{structpersonnage_a2664acffa6fccd8487b9e03b63fbd6da}\label{structpersonnage_a2664acffa6fccd8487b9e03b63fbd6da}} 
+int {\bfseries direction}
+\item 
+\mbox{\Hypertarget{structpersonnage_a4cc9019d0bd7e3eef4928fc5a64338f6}\label{structpersonnage_a4cc9019d0bd7e3eef4928fc5a64338f6}} 
+\hyperlink{structscore}{score} {\bfseries score\+\_\+p}
+\item 
+\mbox{\Hypertarget{structpersonnage_ab40914b74c3c9333291a11ace056c27b}\label{structpersonnage_ab40914b74c3c9333291a11ace056c27b}} 
+\hyperlink{structvie}{vie} {\bfseries vie\+\_\+p}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+jeu.\+h\end{DoxyCompactItemize}

@@ -5,11 +5,11 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 #include <SDL/SDL_mixer.h>
-#include"scrolling.h"
+#include "scrolling.h"
 
 //initialiser l'image du background et sa position initial
 void SCROLL_Init(scrollImage *s/*variable de structure*/,char* path/*nom du image */){
-	s->img = IMG_Load("map.png");
+	s->img = IMG_Load("/home/dhia/Desktop/Tunisian_Geeks-master/Tunisian_Geeks/seifstask/map.png");
 	s->position.x = s->position.y = s->position.w = s->position.h= 0;
 	s->clip.x = s->clip.y = 0;
 	s->clip.w = 600;
