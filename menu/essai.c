@@ -371,7 +371,7 @@ int main()
 
                       animed(animepos, &frame);
                     }
-                    if (hero.positionabs.x == 600) //position of engigmas appiration
+                    /*if (hero.positionabs.x == 600) //position of engigmas appiration
                     {
                       int tempsPrecedent = 0, tempsActuel = 0;
                       //	Question a;
@@ -479,7 +479,7 @@ int main()
                           }
                           tempsActuel = SDL_GetTicks();
                           if (tempsActuel - tempsPrecedent > 5000) /* Si 4000 ms se sont écoulées depuis le dernier tour de boucle */
-                          {
+                          /*{
                             running = 0;
                           }
                         }
@@ -515,7 +515,7 @@ int main()
                       SDL_FreeSurface(sc);
                       SDL_FreeSurface(msg);
                       TTF_CloseFont(font);
-                    }
+                    } */
 
                     if (event.key.keysym.sym == SDLK_LEFT)
                     {

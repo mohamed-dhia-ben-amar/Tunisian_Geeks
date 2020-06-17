@@ -1,0 +1,2 @@
+gcc essai.c -o prog -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+ fprintf(stderr,"l'erreur est %s\n",SDL_GetError());
