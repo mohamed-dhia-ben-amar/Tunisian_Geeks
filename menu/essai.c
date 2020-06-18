@@ -282,8 +282,8 @@ int main()
             if (processedClick == 0 && Sprites[o]->clickEvent == 1)
             {
               SDL_Surface *screen;
-              int mv = 6; /*vitesse de scrolling*/
-              screen = SDL_SetVideoMode(1600, 240, 32, SDL_HWSURFACE);
+              int mv = 6; /*pas de scrolling*/
+              screen = SDL_SetVideoMode(3600, 240, 32, SDL_HWSURFACE);
               SDL_Event event;
               SDL_Surface *fond = NULL;
 
@@ -345,33 +345,52 @@ int main()
 
               SDL_EnableKeyRepeat(1, 1); /*pour saisir multiple touche*/
 
-              while (gameRunning)
+              while (gameRunning == 1)
               {
+
                 while (SDL_PollEvent(&event))
                 {
-                  if (event.type == SDL_QUIT)
-                    gameRunning = 0;
                   if (event.type == SDL_KEYDOWN)
                   {
                     if (event.key.keysym.sym == SDLK_ESCAPE)
-                      gameRunning = 0;
+                    {
+                      SDL_FreeSurface(screen);
+                      screen = SDL_SetVideoMode(1582, 704, 16, SDL_HWSURFACE | SDL_DOUBLEBUF);
+                      if (screen == NULL)
+                      {
+                        printf("Unable to set video mode : %s\n", SDL_GetError());
+                        return 1;
+                      }
+                      Sprite *bg = MakeSprite("bg", 0);
+                      bg->pos.x = 0;
+                      bg->pos.y = 0;
+                      bg->pos.w = 800;
+                      bg->pos.h = 480;
+                      Sprite *contBtn = addButton("play1", 1000, 120);
+                      contBtn->clickEvent = 1;
+                      Sprite *contBtn5 = addButton("settings", 1100, 240);
+                      contBtn5->ShowMenu = 1;
+                      addButton("scoreboard1", 1000, 360);
+                      addButton("credits1", 1100, 480);
+                      Sprite *contBtn2 = addButton("quit11", 1000, 600);
+                      contBtn2->exitEvent = 1;
+                    }
                     if (event.key.keysym.sym == SDLK_RIGHT)
                     {
-
-                      if (hero.positionabs.x < 1001)
-                      {
+                      //if(img.clip.x < img.img->w -img.clip.w)
+                      if (hero.positionabs.x < 700)
                         hero.positionabs.x += 12;
-                        printf("abs.x = %d .\n", hero.positionabs.x);
-                      }
 
-                      if (hero.positionabs.x > 1000)
-                      {
+                      if (hero.positionabs.x < 2900)
                         img.clip.x += mv;
-                      }
+                      else
+                        img.clip.x = 1866;
 
                       animed(animepos, &frame);
-                    }
-                    /*if (hero.positionabs.x == 600) //position of engigmas appiration
+
+                      //printf("hero.positionabs.x = %d .\n", hero.positionabs.x);
+                      printf("img.clip.x = %d .\n", img.clip.x);
+                      /*if (hero.positionabs.x == 600) //position of engigmas appiration
                     {
                       int tempsPrecedent = 0, tempsActuel = 0;
                       //	Question a;
@@ -479,7 +498,7 @@ int main()
                           }
                           tempsActuel = SDL_GetTicks();
                           if (tempsActuel - tempsPrecedent > 5000) /* Si 4000 ms se sont écoulées depuis le dernier tour de boucle */
-                          /*{
+                      /*{
                             running = 0;
                           }
                         }
@@ -516,6 +535,7 @@ int main()
                       SDL_FreeSurface(msg);
                       TTF_CloseFont(font);
                     } */
+                    }
 
                     if (event.key.keysym.sym == SDLK_LEFT)
                     {
@@ -528,13 +548,16 @@ int main()
                     }
                     if (event.key.keysym.sym == SDLK_UP)
                     {
+
                       // EVOLUTION
                       //On avance de 1
                       positionrel.x++;
+
                       if (positionrel.x >= 50)
                       {
                         positionrel.x = -50;
                       }
+
                       //On met à "0" les pos abs:
                       positionabs.x = 200;
                       positionabs.y = 300 - /*hero.h*/ 30;
@@ -552,6 +575,7 @@ int main()
                 SCROLL_Render(&img, &screen); /*bliter l'image du background dans sa nouvelle position */
                 SDL_BlitSurface(fond, NULL, screen, &positionfond);
                 SDL_BlitSurface(hero.image, &animepos[frame], screen, &hero.positionabs);
+
                 SDL_Delay(16);
                 SDL_Flip(screen);
               }
