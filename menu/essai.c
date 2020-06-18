@@ -354,7 +354,7 @@ int main()
                   {
                     if (event.key.keysym.sym == SDLK_ESCAPE)
                     {
-                      SDL_FreeSurface(screen);
+                      /*SDL_FreeSurface(screen);
                       screen = SDL_SetVideoMode(1582, 704, 16, SDL_HWSURFACE | SDL_DOUBLEBUF);
                       if (screen == NULL)
                       {
@@ -373,7 +373,7 @@ int main()
                       addButton("scoreboard1", 1000, 360);
                       addButton("credits1", 1100, 480);
                       Sprite *contBtn2 = addButton("quit11", 1000, 600);
-                      contBtn2->exitEvent = 1;
+                      contBtn2->exitEvent = 1;*/
                     }
                     if (event.key.keysym.sym == SDLK_RIGHT)
                     {
